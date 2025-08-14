@@ -1,13 +1,12 @@
-# projeto_loja/site_loja/urls.py
+# site_loja/urls.py
 
 from django.urls import path
-from . import views # Importa as views que acabamos de criar
+from . import views
 
-# Define o namespace para esta aplicação
-app_name = 'site_loja' 
+app_name = 'site_loja' # Define um namespace para suas URLs
 
 urlpatterns = [
-    path('', views.home, name='home'), 
-    #path('produtos/', views.lista_produtos, name='lista_produtos'), 
-    path('produtos/', views.produtos_lista, name='produtos_lista'),
+    path('', views.home, name='home'),
+    path('produtos/', views.listar_produtos, name='listar_produtos'),
+    path('perfil/', views.perfil, name='perfil'), # URL para a página de perfil
 ]
